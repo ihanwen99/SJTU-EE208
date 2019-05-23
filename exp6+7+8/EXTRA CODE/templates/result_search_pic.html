@@ -1,0 +1,23 @@
+$def with (a,name)
+
+<head>
+    <style type="text/css">
+            [href]{color:blue;}
+    </style>
+</head>
+
+<em>$a </em><br><br><br>
+
+$if name:
+    $for i in name:
+        <img src="$i['imgurl']" />
+        <a href="$i['imgurl']">click here</a>
+        <a href="$i['url']">$i['title']</a><br>
+        <p>$i['description']</p>
+
+
+
+
+
+$else:
+    <em>Hello</em>, world!

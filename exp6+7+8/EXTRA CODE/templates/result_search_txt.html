@@ -1,0 +1,14 @@
+$def with (a,name)
+
+<em>$a </em><br><br><br>
+
+$if name:
+    $for i in name:
+        <a href="$i['url']">$i['title']</a><br>
+        <em>$i['keyword']</em><br><br>
+        <em>$i['url']</em><br><br>
+
+
+
+$else:
+    <em>Hello</em>, world!

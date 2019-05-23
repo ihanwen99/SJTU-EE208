@@ -1,0 +1,42 @@
+$def with (a,name)
+
+<head>
+<style type="text/css">
+p
+{
+    background-color: lightgreen;
+border:red solid thin;
+outline:yellow dotted 5px;
+}
+h1{
+    text-align :center;
+    }
+h3{
+    text-align :center;
+    }
+img
+{
+height: 300px;
+width: 400px;
+}
+
+
+</style>
+</head>
+
+<h1>"$a" </h1><h3>搜索结果</h3><br>
+
+
+
+$if name:
+    $for i in name:
+        <p>
+            <img src="$i['imgurl']" />
+            <a href="$i['url']">$i['title']</a><br>
+        </p>
+
+
+
+
+$else:
+    <em>Hello</em>, world!
